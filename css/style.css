@@ -1,0 +1,269 @@
+body {
+	background-color: white;/*rgb(30,30,30);*/
+	font-size: 20px;
+	color: rgb(15,0,255);
+	margin: 0;
+	padding: 0;
+	/*background-color: #f5fbff;*/
+}
+
+.content {
+	/*margin: 19px;*/
+    background-color: #058feb;
+}
+
+.icon {
+    height: 40px;
+    width: 40px;
+    padding: 8px;
+}
+
+.menu-bar {
+	overflow: hidden;
+	height: 60px;
+}
+
+.menu-bar ul {
+	height: 60px;
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	top: 0px;
+	background-color: #333;;
+	width: 100%; 
+}
+
+.menu-bar li {
+	width: 60px;
+	float: left;
+	text-align: center;
+	position: relative;
+	padding: 3px 0;
+}
+
+.menu-bar li:hover, li#active:hover {
+	background-color: #058feb;
+	/*filter: brightness(100);
+	filter: invert(100);*/
+}
+
+li#active {
+	/*background-color: black;
+    filter: brightness(50);
+	filter: invert(50);*/
+	background-color: #191919;/*#058feb;*/
+}
+
+/* PROJECTS */
+.projectTiles {
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: auto auto auto auto;
+}
+
+ul.projectTiles {
+	list-style-type: none;
+	height: auto;
+	padding: 1%;
+}
+
+#screenshotTile {
+	height: 10vw;
+	border: 10px groove rgb(204, 204, 204);
+	margin: 5px;
+}
+
+.projectTiles li {
+	font-family: 'Francois One', sans-serif;
+	font-size: 12px;
+	color: black;
+	text-align: center;
+	padding: 5%;
+	border-radius: 2px;
+	width: auto;
+}
+
+.projectTiles li:hover {
+	background-color: rgba(201,201,201,0.5);
+	transition-duration: 0.4s;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 2px 6px 3px rgba(0,0,0,0.26); 
+    box-shadow: 1px 2px 6px 3px rgba(0,0,0,0.26);
+}
+
+.projectName {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 1.3vw;
+}
+
+/*PAGE INFO*/
+.pageInfo {
+	font-family: 'Francois One', sans-serif;
+	display: grid;
+	grid-template-columns: 192px auto;
+	grid-column-gap: 10px;
+	align-items: center;
+	color: white;
+}
+
+.gridContainer {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 2%;
+}
+
+.pageImg {
+	width: auto;
+	grid-row-start: 1;
+  	grid-row-end: 3;
+}
+
+.pageImg img {
+	height:  192px;
+	align-content: end;
+}
+
+.pageDescription { 
+	margin-left: 20px;
+}
+
+.pageTitle {
+	margin-left: 20px;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	padding-left: 5%;
+}
+
+.tileContainer {
+	width: 100%;
+}
+
+.tileCenter {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*p, ul #all of these*/
+/*p.bob # all of the p's tagged w/ bob class*/
+/*ul.spacey li strong #find ul w/ a spacey class, and find any of the li, and find strong in that */
+
+.grid-container {
+	height: 100%;
+}
+
+.pageIntro {
+	height: 90vh;
+    color: black;
+}
+
+/*INDEX*/
+.aboutMe {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 50% 50%;
+	height: 100%;
+	font-family: 'Archivo', sans-serif;
+}
+
+.aboutTitle {
+	margin-left: 20px;
+    padding-left: 5%;
+    align-self: end;
+    font-size: 1.7em;
+    text-shadow: 2px 2px 0px #F2F2F2;
+}
+
+.pageDescription {
+    padding-left: 5%;
+    width: 70%;
+}
+
+.picture {
+	height: 100%;
+	background-color: #058feb;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	width: auto;
+	text-align: center;
+	display: flex;
+ 	justify-content: center;
+  	align-items: center;
+}
+
+.picture img {
+	background-color: #058feb;
+	grid-row-start: 1;
+	grid-row-end: 3;
+	width: 50%;
+	margin: auto;
+}
+
+.picture-container {
+	background-color: #058feb;
+}
+
+.halfPage {
+	background-color: #058feb;
+}
+
+ul.projectsList img {
+	height: 128px;
+	width: 128px;
+}
+
+.projectsTitle {	
+	text-align: center;
+	color: #058feb;
+
+	font-family: 'Archivo', sans-serif;
+	text-shadow: 2px 2px 0px rgba(0,0,0,0.7);
+    width: 100%;
+    background-color: #333;
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: #969696;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #969696;
+    color: white;
+}
+
+.projects {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul.projectsList {
+	list-style-type: none;
+	height: auto;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-columns: repeat(4, auto);
+	justify-content: center;
+}
+
+.projectsList li {
+	font-family: 'Francois One', sans-serif;
+	font-size: 12px;
+	color: black;
+	text-align: center;
+	padding: 5px;
+	border-radius: 2px;
+}
+
+.projectsList li:hover {
+	background-color: rgba(201,201,201,0.5);
+	transition-duration: 0.4s;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 2px 6px 3px rgba(0,0,0,0.26); 
+    box-shadow: 1px 2px 6px 3px rgba(0,0,0,0.26);
+}
+
+.tileContainer {
+	background-color: white;
+    border-top-style: solid;
+    border-top-width: 6px;
+    border-top-color: #01406b;
+}
