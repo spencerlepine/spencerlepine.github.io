@@ -9,28 +9,61 @@
 
 			- create project pages
 			- work on profiles page
+
+			- finish SiteMap CSS, add link to it, create Sitemap page
+			- finish Contacts footer CSS, add link to it, create Sitemap page
+
+			- make sure all of the css variables are created
 	-->
 	<head>
 		<meta charset="utf-8">
-		<title>Spencer Lepine</title>
+		<title>Home | Spencer Lepine</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+		<link rel="shortcut icon" href="images/icon.png">
+		<link rel="icon" href="images/icon.png">
+		<script src="scripts/transscript.js"></script>
 	</head>
 	<body>
-		<div class="menu-bar">
+		<header>
 			<ul>
-				<li id="active"><a href="index.html"><img class="icon" src="images/house.png" alt="Home Icon"></a></li>
-				<li><a href="Python-Projects/python-projects.html"><img class="icon" src="images/python.png" alt="Python Icon"></a></li>
-				<li><a href="Javascipt-Projects/javascript-projects.html"><img class="icon" src="images/javascript.png" alt="Javascript Icon"></a></li>
-				<li><a href="Other/apps.html"><img class="icon" src="images/android.png" alt="Android Icon"></a></li>
-				<li><a href="profiles.html"><img class="icon" src="images/profile.png" alt="Profiles Icon"></a></li>
+				<li id="active">
+					<a href="index.html"><img class="icon" src="images/house.png" alt="Home Icon"></a>
+				</li>
+				<li>
+					<a href="Python-Projects/python-projects.html"><img class="icon" src="images/python.png" alt="Python Icon"></a>
+				</li>
+				<li>
+					<a href="Javascipt-Projects/javascript-projects.html"><img class="icon" src="images/javascript.png" alt="Javascript Icon"></a>
+				</li>
+				<li>
+					<a href="Other/apps.html"><img class="icon" src="images/android.png" alt="Android Icon"></a>
+				</li>
+				<li>
+					<a href="profiles.html"><img class="icon" src="images/profile.png" alt="Profiles Icon"></a>
+				</li>
 			</ul>
-		</div>
-		<div class="pageIntro">
+		</header>
+		<div class="siteIntro">
 			<div class="grid-container">
 				<div class="aboutMe">
-					<div class="picture">	
-						<img src="images/me.png" alt="Picture of me">
+					<div id="my-picture">	
+						<div id="bottom-triangle">
+						</div>
+						<div id="top-triangle">
+						</div>
+						<div id="inner-potrait-grid">
+							<img id="my-pic" src="images/me.png" alt="Picture of me" class="no-highlight">
+							<div class="intro-links" id="github-bubble">
+								<a href="https://www.github.com/spencerlepine" target="_blank"><img src="images/github-logo.png" alt="GitHub Logo"></a>
+							</div>
+							<div class="intro-links" id="twitter-bubble">
+								<a href="https://www.twitter.com/spencerlepine" target="_blank"><img src="images/twitter-logo.png" alt="Twitter Logo"></a>
+							</div>
+							<div class="intro-links" id="linkedin-logo">
+								<a href="https://www.linkedin.com/in/spencer-lepine-b142921b4/" target="_blank"><img src="images/linkedin-logo.png" alt="LinkedIn Logo"></a>
+							</div>
+						</div>
 					</div>	
 					<div class="aboutTitle">
 						<h1>About Me:</h1>
@@ -49,30 +82,70 @@
 			<div class="tileContainer" style="border-style: none">
 				<ul class="projectsList">
 					<li>
-						<a href="Python-Projects/python-projects.html">
-							<img src="Python-Projects/images/python-logo.png" alt="Python Logo">
-						</a>
-						<h2 class="projectName">Python</h2>
+						<div class="tile-link regular">
+							<div class="hexagon">
+								<img src="images/hexagon.png" alt="Hexagon Tile">
+							</div>
+							<div class="inner-link">
+								<div style="margin:auto;">
+									<a href="Python-Projects/python-projects.html" class="LilLink">
+									<img src="Python-Projects/images/python-logo.png" alt="Python Logo" onmouseenter="makeBig(0)" onmouseout="makeSmall(0)">
+									</a>
+									<h2 class="projectName">Python</h2>
+								</div>
+							</div>
+						</div>
 					</li>
 					<li>
-						<a href="Javascipt-Projects/javascript-projects.html">
-							<img src="Javascipt-Projects/images/javascript-logo.png" alt="Javascipt Logo">
-						</a>
-						<h2 class="projectName">Javascript</h2>
+						<div class="tile-link regular">
+							<div class="hexagon">
+								<img src="images/hexagon.png" alt="Hexagon Tile">
+							</div>
+							<div class="inner-link">
+								<div style="margin:auto;">
+									<a href="Javascipt-Projects/javascript-projects.html">
+										<img src="Javascipt-Projects/images/javascript-logo.png" alt="Javascipt Logo" onmouseenter="makeBig(1)" onmouseout="makeSmall(1)">
+									</a>
+									<h2 class="projectName">Javascript</h2>
+								</div>
+							</div>
+						</div>
 					</li>
 					<li>
-						<a href="Other/apps.html">
-							<img src="Other/images/android-logo.png" alt="Android Logo">
-						</a>
-						<h2 class="projectName">Apps</h2>
+						<div class="tile-link regular">
+							<div class="hexagon">
+								<img src="images/hexagon.png" alt="Hexagon Tile">
+							</div>
+							<div class="inner-link">
+								<div style="margin:auto;">
+									<a href="Other/apps.html">
+								<img src="Other/images/android-logo.png" alt="Android Logo" onmouseenter="makeBig(2)" onmouseout="makeSmall(2)">
+							</a>
+							<h2 class="projectName">Apps</h2>
+								</div>
+							</div>
+						</div>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<!-- <div class="links">
-			GitHub
-			Twitter
-		</div> -->
+
+		<footer>
+			<div id="footer-angles">
+				<img src="images/spike.png" alt="Page Section Divider" style="user-select: none; pointer-events: none;">
+			</div>
+			<div class="link-wrapper">
+				<div class="footer-link">
+					<a><h1>SITEMAP</h1></a>
+					<a><img src="images/sitemap-icon.png" alt="Sitemap Icon"></a>
+				</div>
+			</div>
+			<div class="link-wrapper">
+				<div class="footer-link">
+					<a><h1>CONTACT</h1></a>
+					<a><img src="images/profile.png" alt="Profiles Icon"></a>
+				</div>
+			</div>
+		</footer>
 	</body>
-	<!-- <foot></foot> -->
 </html>
