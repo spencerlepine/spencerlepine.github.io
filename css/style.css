@@ -452,6 +452,15 @@ footer {
 	margin: 3%;
 }
 
+/* PROJECT PAGES */
+.project-wrapper {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
 /*p, ul #all of these*/
 /*p.bob # all of the p's tagged w/ bob class*/
 /*ul.spacey li strong #find ul w/ a spacey class, and find any of the li, and find strong in that */
