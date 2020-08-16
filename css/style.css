@@ -6,6 +6,8 @@
 
 	--hex-size: 38vh;
 	--tile-img-size: 128px;
+	
+	--icon-size: 60px;
 }
 
 body {
@@ -17,6 +19,92 @@ body {
 	height: 100%;
 }
 
+img {
+	max-width: 100%;
+	display: block;
+}
+/*------/-------------------------------------------*/
+@media (max-width: 365px) {
+	ul, .siteIntro, .projects, footer { display: none !important; }
+
+	header {
+		background-color: white!important;
+	}
+
+	#header-message:before {
+		color: black!important;
+		content: 'Please view on larger screen.';
+		padding-left: 10%!important;
+	}
+}
+
+/*@media (min -width: 366px) and (max-width: 710px){
+  	ul.projectsList {
+		grid-template-columns: 1fr !important;
+	}
+}*/
+
+@media (max-width: 1000px) { /*(min-width: 500px) and (*/
+	.aboutMe {
+	    grid-template-columns: 1fr !important;
+	    height: 100%;
+	    font-family: 'Archivo', sans-serif;
+
+	    grid-template-rows: auto;
+	    grid-template-rows: min-content;
+
+	}
+
+	#bottom-triangle, #top-triangle {
+		display: none;
+	}
+
+	.aboutTitle {
+		padding-left: 0px;
+	}
+
+	#my-picture {
+		/*padding: 5%;*/
+		min-height: fit-content;
+		grid-row-end: 3;
+		display: block;
+		height: fit-content;
+	}
+
+
+	.intro-links {
+		max-width: 80px;
+	    max-height: 80px;
+	    width: 80%;
+	    height: 100%;
+	}
+
+	#inner-potrait-grid {
+		padding-top: 5%;
+		padding-bottom: 5%;
+	}
+
+	.siteIntro {
+   		height: fit-content !important;
+	}
+
+	ul.projectsList {
+		grid-template-columns: auto !important;
+	}
+}
+
+@media (orientation: portrait) {
+  .orientation:after {
+    content: " Portrait.";
+  }
+}
+
+@media (orientation: landscape) {
+  .orientation:after {
+    content: " Landscape.";
+  }
+}
+/*------/-------------------------------------------*/
 .icon {
     height: 40px;
     width: 40px;
@@ -134,7 +222,7 @@ li#active {
 }
 
 #bottom-triangle {
-    left: calc(calc(50% - var(--triangle-size, 100px)) + 1px);
+    left: calc(calc(50% - var(--triangle-size, 100px)) + 2px);
     top: calc(90vh + var(--header-size, 60px) - var(--triangle-size, 100px));
 
     border-right: var(--triangle-size, 100px) solid white;
@@ -158,6 +246,7 @@ li#active {
 	display: flex;
  	text-align: center;
   	align-items: center;
+  	/*min-width: 400px*/
 }
 
 #my-pic {
@@ -300,6 +389,11 @@ ul.projectsList .inner-link img {
 	width: var(--tile-img-size, 128px);
 }
 
+ul.projectsList li {
+	width: var(--hex-size, 100px);
+	height: var(--hex-size, 100px);
+}
+
 .projectsTitle {	
 	text-align: center;
 	color: var(--main-blue, #058feb);;
@@ -322,15 +416,20 @@ ul.projectsList .inner-link img {
 	height: calc(auto + 20vh);
 	margin-left: auto;
 	margin-right: auto;
+	overflow: hidden;
 }
 
 ul.projectsList {
 	list-style-type: none;
 	height: auto;
 	display: grid;
-	grid-gap: 10%;
-	grid-template-columns: repeat(4, auto);
+	/*grid-gap: 10%;*/
+	grid-template-columns: repeat(3, auto);
 	justify-content: center;
+	margin-left: auto;
+	margin-right: auto;
+
+	padding: 0px;
 }
 
 .projectsList li {
@@ -421,7 +520,7 @@ footer {
 	grid-column-end: 3;
 	padding-top: 5%;
 	overflow: hidden;
-	height: 210px;
+	height: auto;
 }
 
 .link-wrapper {
@@ -446,10 +545,30 @@ footer {
 }
 
 .footer-link img {
-	width: 60px;
-	height: 60px;
+	width: var(--icon-size, 60px);
+	height: var(--icon-size, 60px);
 	padding: 5%;
 	margin: 3%;
+}
+
+#footer-bar {
+	grid-column-start: 1;
+	grid-column-end: 3;
+	
+	border-top: 1px solid gray;
+	background-color: black;
+	border-bottom: 1px solid gray;
+	height: var(--icon-size, 60px);
+	width: 100vw;
+
+
+	background-color: var(--main-black, #333);
+    border-top-style: solid;
+    border-top-width: 3px;
+    border-top-color: #969696;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #969696;
 }
 
 /* PROJECT PAGES */
@@ -457,10 +576,159 @@ footer {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
+	padding-top: 5%;
+	padding-bottom: 5%;
+
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 0px;
+	justify-content: center;
+
+	background-color: white;
+
+    color: black;
+    font-family: sans-serif;
+
+    /*grid-template-rows: auto auto auto;*/
 }
 
+#project-title {
+	grid-column-start: 1;
+    grid-column-end: 3;
 
+    justify-self: start;
+    font-family: 'Archivo', sans-serif;
 
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-color: #f1f1f1;
+    width: 100%;
+}
+
+#project-desc {
+	grid-column-start: 1;
+    grid-column-end: 3;
+
+    justify-self: start;
+}
+
+#project-date {
+	color: #adadad;
+	width: fit-content;
+}
+
+#project-link {
+	width: fit-content;
+	padding-right: 3%;
+	justify-self: end;
+}
+
+#link-icon {
+	width: 20px;
+	height: 20px;
+}
+
+/* Porject Screenshots */
+.project-screenshots {
+	margin-left: auto;
+    margin-right: auto;
+	width: 90%;
+	background-color: white;
+}
+.image-view {
+	width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5%;
+	display: block;
+	/*margin: auto;*/
+}
+
+.image-view #screenshot {
+	background-color: white;
+	margin: auto;
+	width: 400px;
+	overflow: hidden;
+	grid-column-start: 2;
+	grid-column-end: 3;
+	grid-row-start: 1;
+	grid-row-end: 2;
+}
+
+#img-back-btn {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+
+#img-forward-btn {
+	grid-column-start: 3;
+	grid-column-end: 4;
+}
+
+.button-class img {
+	margin:auto;
+
+	width: var(--icon-size, 60px);
+	height: var(--icon-size, 60px);
+}
+
+.button-class {
+	overflow: hidden;
+	margin: auto;
+
+	border-radius: 50%;
+
+	width: var(--icon-size, 60px);
+	height: var(--icon-size, 60px);
+
+	/*box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	background-color:#f9f9f9;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	/*padding:6px 24px;*/
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;*/
+}
+
+.button-class:hover {
+	filter: brightness(50%);
+	/*background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	background-color:#e9e9e9;*/
+}
+
+.button-class:active {
+	position:relative;
+	top:1px;
+}
+
+#screenshot {
+	width: fit-content;
+}
+
+.displayed-ss {
+	margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    height: 400px;
+
+    overflow: hidden;
+
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.proj-screenshot {
+	display: none;
+	margin-left: auto;
+	margin-right: auto;
+}
 /*p, ul #all of these*/
 /*p.bob # all of the p's tagged w/ bob class*/
 /*ul.spacey li strong #find ul w/ a spacey class, and find any of the li, and find strong in that */

@@ -8,6 +8,33 @@
 
 		<script language="JavaScript" type="text/javascript" src="../scripts/jquery-3.5.1.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="../scripts/projectPage.js"></script>
+
+		<link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style>
+			/*:root {
+				--triangle-size: 5vw;
+			}*/
+			body {
+				background-color: #99d6ff;;
+			}
+
+			/*#foot1 {
+				position: absolute;
+				left: -1px;
+				
+				border-left: var(--triangle-size, 5vw) solid #058feb;
+				border-bottom: var(--triangle-size, 5vw) solid transparent;
+			}
+
+			#foot2 {
+				position: absolute;
+				right: -1px;
+
+				border-right: var(--triangle-size, 5vw) solid #058feb;
+				border-bottom: var(--triangle-size, 5vw) solid transparent;
+			}*/
+		</style>
 	</head>
 	<body onload="createPage('pygame-2048')">
 		<header>
@@ -24,15 +51,45 @@
 			</div>
 			<div id="project-date">
 			</div>
-			<div id="project-desc">
-			</div>
 			<div id="project-link">
 			</div>
-			<div id="projectImg">
+			<div id="project-desc">
+			</div>
+			<!-- <div id="projectImg">
+			</div> -->
+		</div>
+		<div class="project-screenshots">
+			<div class="image-view">
+				<div class="displayed-ss">
+					<!-- <button onclick="button()" id="img-back-btn" class="button-class"></button> -->
+					<div id="img-back-btn" class="button-class" onclick="backwardsScroll()"><img src="images/left-arrow.png" alt="Left Arrow"></div>
+					<div id="screenshot">
+						<img class="proj-screenshot" src="images/2048-ss.jpg" alt="Project Screenshot">
+					</div>
+					<div id="img-forward-btn" class="button-class" onclick="forwardScroll()"><img src="images/right-arrow.png" alt="Right Arrow"></div>
+				</div>
 			</div>
 		</div>
+		<script language="JavaScript" type="text/javascript" src="../scripts/screenshotScroll.js"></script>
 	 </body>
-	<foot>
-		
-	</foot>
+	<footer>
+		<div id="foot1">
+		</div>
+		<div id="foot2">
+		</div>
+		<div id="footer-bar">
+		</div>
+		<div class="link-wrapper">
+			<div class="footer-link">
+				<a><h1>SITEMAP</h1></a>
+				<a><img src="../images/sitemap-icon.png" alt="Sitemap Icon"></a>
+			</div>
+		</div>
+		<div class="link-wrapper">
+			<div class="footer-link">
+				<a><h1>CONTACT</h1></a>
+				<a><img src="../images/profile.png" alt="Profiles Icon"></a>
+			</div>
+		</div>
+	</footer>
 </html>

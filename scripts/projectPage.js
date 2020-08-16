@@ -62,7 +62,7 @@ function getStartDate(date) {
 
 function definePage(project_title, project_link, project_desc, project_start_date) {
 	$('#project-title').html('<h1 id="projectName">' + project_title + '</h1>');
-	$('#project-link').html('<p><a href=' + project_link + '>Project Link</a></p>');
+	$('#project-link').html('<p><a href=' + project_link + ' target="blank_">Project Link <img id="link-icon" src="images/link-icon.png" alt="Link Icon"></a></p>');
 	$('#project-desc').html('<p><b>Description: </b>' + project_desc + '</p>');
 	$('#project-date').html('<p>Last updated: ' + project_start_date + '</p>');
 }
@@ -89,7 +89,7 @@ function createPage(repoName) {
 	  link = data.html_url
 	  desc =  data.description
 	  start_date = getStartDate(data.updated_at);
-
+	  
 	  definePage(title, link, desc, start_date);
 	}
 
