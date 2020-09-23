@@ -1,168 +1,45 @@
 <!DOCTYPE html>
-<html lang='en'>
+
+<html lang="en">
 	<!--
 		TO-DO:
-			- make the fonts scale down
-			- reorder the grid for smaller screen
-			- scale menu bar for smaller screens
-			- add picture of me
+			- Scalable site: make the fonts scale down
 
-			- create project pages
-			- work on profiles page
+			- add picture of me?
 
-			- finish SiteMap CSS, add link to it, create Sitemap page
-			- finish Contacts footer CSS, add link to it, create Sitemap page
+			- Start Porjects page
 
-			- make sure all of the css variables are created
-
-			-https://medium.com/front-end-weekly/how-to-add-some-bubbles-to-your-website-8c51b8b72944
-
-
-			- fix footer on 2048 page
-
-			- add footer to all pages
-
-			- put footer style in css instead of head in 2048 page
-
-			- add reference to archivo font on project pages
-			- add reference to website icon on all pages
-
-			- add screenshot section to each project, add script reference for scroller on those pages too
-			- add view port tag to all pages
+			-links "coming soon"
+			- each link targets blank or not.
 	-->
 	<head>
 		<meta charset="utf-8">
-		<title>Home | Spencer Lepine</title>
+		<title>Spencer Lepine | Full Stack Developer </title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
 		<link rel="shortcut icon" href="images/icon.png">
 		<link rel="icon" href="images/icon.png">
-		<script src="scripts/transscript.js"></script>
 	</head>
 	<body>
-		<header>
-			<p id="header-message" style="position: absolute"></p>
-			<ul>
-				<li id="active">
-					<a href="index.html"><img class="icon" src="images/house.png" alt="Home Icon"></a>
-				</li>
-				<li>
-					<a href="Python-Projects/python-projects.html"><img class="icon" src="images/python.png" alt="Python Icon"></a>
-				</li>
-				<li>
-					<a href="Javascipt-Projects/javascript-projects.html"><img class="icon" src="images/javascript.png" alt="Javascript Icon"></a>
-				</li>
-				<li>
-					<a href="Other/apps.html"><img class="icon" src="images/android.png" alt="Android Icon"></a>
-				</li>
-				<li>
-					<a href="profiles.html"><img class="icon" src="images/profile.png" alt="Profiles Icon"></a>
-				</li>
-			</ul>
-		</header>
-		<div class="siteIntro">
-			<div class="grid-container">
-				<div class="aboutMe">
-					<div id="my-picture">	
-						<div id="bottom-triangle">
-						</div>
-						<div id="top-triangle">
-						</div>
-						<div id="inner-potrait-grid">
-							<img id="my-pic" src="images/me.png" alt="Picture of me" class="no-highlight">
-							<div class="intro-links" id="github-bubble">
-								<a href="https://www.github.com/spencerlepine" target="_blank"><img src="images/github-logo.png" alt="GitHub Logo"></a>
-							</div>
-							<div class="intro-links" id="twitter-bubble">
-								<a href="https://www.twitter.com/spencerlepine" target="_blank"><img src="images/twitter-logo.png" alt="Twitter Logo"></a>
-							</div>
-							<div class="intro-links" id="linkedin-logo">
-								<a href="https://www.linkedin.com/in/spencer-lepine-b142921b4/" target="_blank"><img src="images/linkedin-logo.png" alt="LinkedIn Logo"></a>
-							</div>
-						</div>
-					</div>	
-					<div class="aboutTitle">
-						<h1>About Me:</h1>
-					</div>
-					<div class="pageDescription">
-						<p>	Hello! My name is Spencer Lepine, and I am someone who has always been inspired by the power of programming. This site was created to showcase various projects and coding challenges that I have worked on in the past. Explore my progression as I gain experience with popular languages such as Javascript, Python, and more.</p>
-						<!--https://pages.github.com/-->
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="projects">
-			<div class="projectsTitle">
-				<h1>Project Categories</h1>
-			</div>
-			<div class="tileContainer" style="border-style: none">
-				<ul class="projectsList">
-					<li>
-						<div class="tile-link regular">
-							<div class="hexagon">
-								<img src="images/hexagon.png" alt="Hexagon Tile">
-							</div>
-							<div class="inner-link">
-								<div style="margin:auto;">
-									<a href="Python-Projects/python-projects.html" class="LilLink">
-									<img src="Python-Projects/images/python-logo.png" alt="Python Logo" onmouseenter="makeBig(0)" onmouseout="makeSmall(0)">
-									</a>
-									<h2 class="projectName">Python</h2>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="tile-link regular">
-							<div class="hexagon">
-								<img src="images/hexagon.png" alt="Hexagon Tile">
-							</div>
-							<div class="inner-link">
-								<div style="margin:auto;">
-									<a href="Javascipt-Projects/javascript-projects.html">
-										<img src="Javascipt-Projects/images/javascript-logo.png" alt="Javascipt Logo" onmouseenter="makeBig(1)" onmouseout="makeSmall(1)">
-									</a>
-									<h2 class="projectName">Javascript</h2>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="tile-link regular">
-							<div class="hexagon">
-								<img src="images/hexagon.png" alt="Hexagon Tile">
-							</div>
-							<div class="inner-link">
-								<div style="margin:auto;">
-									<a href="Other/apps.html">
-								<img src="Other/images/android-logo.png" alt="Android Logo" onmouseenter="makeBig(2)" onmouseout="makeSmall(2)">
-							</a>
-							<h2 class="projectName">Apps</h2>
-								</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
+		<div id="content">
+			<h1>
+				Hi, I'm
+				<span id="name-highlight">Spencer Lepine</span>.
+			</h1>
+			<h3>I'm a Software Engineer</h3>
 
-		<footer>
-			<div id="footer-angles">
-				<img src="images/spike.png" alt="Page Section Divider" style="user-select: none; pointer-events: none;">
+			<div class="links">
+				<a href="www.github.com/spencerlepine" target="_blank" class="img-link"><img src="images/github-logo.png" alt="GitHub Logo"></a>
+				<a href="https://www.linkedin.com/in/spencer-lepine-b142921b4/" target="_blank" class="img-link"><img src="images/linkedin-logo.png" alt="LinkedIn Logo"></a>
+				<a href="mailto:spencerlepine@gmail.com" target="_blank" class="img-link"><img src="images/mail-logo.png" alt="Mail Logo"></a>
 			</div>
-			<div class="link-wrapper">
-				<div class="footer-link">
-					<a><h1>SITEMAP</h1></a>
-					<a><img src="images/sitemap-icon.png" alt="Sitemap Icon"></a>
-				</div>
+
+			<div class="links">
+				<a href="#" class="text-link">Projects</a>
+				<a href="#" class="text-link">Resume</a>
+				<a href="#" class="text-link">Coding Challenges</a>
 			</div>
-			<div class="link-wrapper">
-				<div class="footer-link">
-					<a><h1>CONTACT</h1></a>
-					<a><img src="images/profile.png" alt="Profiles Icon"></a>
-				</div>
-			</div>
-		</footer>
+		</div>
 	</body>
 </html>

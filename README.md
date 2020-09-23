@@ -1,2 +1,4 @@
 # spencerlepine.github.io
-A website to showcase various coding projects.
+Portfolio website for Spencer Lepine
+
+> Visit here: [spencerlepine.github.io](spencerlepine.github.io)
