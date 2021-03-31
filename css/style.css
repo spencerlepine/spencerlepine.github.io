@@ -133,3 +133,15 @@ h2 {
 p {
 	font-size: 23pt;
 }
+
+.homeLink {
+	position: fixed;
+    padding: 4px;
+    font-size: 2em;
+    color: #ffc107;
+    border: 1px solid ghostwhite;
+    border-radius: 4px;
+    margin: 6px;
+	background-color: #393939;
+	z-index: 9;
+}
