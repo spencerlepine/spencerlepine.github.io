@@ -7,3 +7,9 @@ Portfolio website for Spencer Lepine
 - Accessible
 - Responsive UI
 - Google Analytics
+
+## Local Development
+
+```sh
+npx prettier --write .
+```
