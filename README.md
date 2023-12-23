@@ -2,6 +2,8 @@
 
 Portfolio website for Spencer Lepine
 
+![](https://spencerlepine.github.io/images/thumbnail.png)
+
 ## Features
 
 - Accessible
