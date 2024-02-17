@@ -11,6 +11,7 @@ To demonstrate holistic development skills, it is important to document the proj
 Phases:
 
 Planning Phase:
+ - User flow: identify purpose/expected flow of a portfolio site (why ppl are viewing), recruiter, client?
  - Researching technologies (libraries to use, hosting service, UI mock software)
  - Design UI Mock (mobile and desktop)
 
