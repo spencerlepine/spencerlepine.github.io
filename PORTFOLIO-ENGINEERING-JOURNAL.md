@@ -34,3 +34,16 @@ I learned XYZ. It took N weeks
 
 <link to source code>
 <link to website>
+
+
+
+
+
+MORE NOTES:
+Work backwards - What recruiters want to see on the website?? Must have sections
+
+How to ORDER the sections - average use spends XX seconds on website 
+
+DONT REINVENT THE WHEEL - Find successful developers already, study them
+
+KISS. Development/maintainers took so long for the other website. I had no desire to update it. Long term maintainer is crucial, so it doesn’t become stale. I wanted my website to be so modern and fancy, it took away from the practicality of it. If someone clicks away, all that effort was wasted
