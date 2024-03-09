@@ -47,3 +47,15 @@ How to ORDER the sections - average use spends XX seconds on website
 DONT REINVENT THE WHEEL - Find successful developers already, study them
 
 KISS. Development/maintainers took so long for the other website. I had no desire to update it. Long term maintainer is crucial, so it doesn’t become stale. I wanted my website to be so modern and fancy, it took away from the practicality of it. If someone clicks away, all that effort was wasted
+
+#### 3/8 notes
+To break down the UX design process into smaller steps, here is what i did:
+
+-Minimum required components
+-General layout of components (desktop)
+-General layout for mobile!!
+-General color/backgrounds of components
+-Styling of components (color, border, border radius)
+-Spacing of components
+-Animation of components (+hover style)
+
