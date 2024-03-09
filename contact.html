@@ -40,5 +40,78 @@
   </head>
   <body>
     <p>Under construction, see <a href="https://spencerlepine.com">spencerlepine.com</a></p>
+
+    <form
+      action="https://public.herotofu.com/v1/aae45b10-27cb-11ed-9d54-c9f9d2b00e7b"
+      method="POST"
+      target="_blank"
+      id="myForm"
+      className="max-w-md mx-auto pb-10 pt-4 mb-20"
+    >
+      <div className="mb-4">
+        <input
+          type="text"
+          data-testid="contact-form-name-input"
+          placeholder="Name"
+          name="name"
+          className="w-full p-4 text-xs font-semibold border-2 border-text-primary rounded"
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <input
+          type="email"
+          data-testid="contact-form-email-input"
+          placeholder="name@example.com"
+          className="w-full p-4 text-xs font-semibold border-2 border-text-primary rounded"
+          name="email"
+          required
+        />
+      </div>
+      <div className="mb-4">
+        <textarea
+          placeholder="Message..."
+          data-testid="contact-form-message-input"
+          className="w-full p-4 text-xs font-semibold h-24 border-2 border-text-primary rounded"
+          name="message"
+          required
+        ></textarea>
+      </div>
+      <div className="text-right">
+        <button type="submit" className="bg-secondary text-primary border-secondary px-6 py-2 font-bold border-2 border-solid rounded-xl" data-testid="contact-form-submit-btn">
+          Submit
+        </button >
+      </div>
+    </form>
   </body>
+  <script>
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault(); // Prevent default form submission
+      const data = new FormData(form);
+
+      // Add dynamic data
+      const submissionDate = new Date();
+      data.append('SUBMISSION_DATE', submissionDate.toString());
+
+      // Send POST request
+      fetch("https://public.herotofu.com/v1/aae45b10-27cb-11ed-9d54-c9f9d2b00e7b", {
+        method: 'POST',
+        body: data,
+      })
+      .then(response => response.json())
+      .then(responseData => {
+        // Handle successful response
+        console.log('Response:', responseData);
+        // Do something with the response data
+      })
+      .catch(error => {
+        // Handle errors
+        console.error('Error:', error);
+      });
+
+      form.submit(); // Submit the form programmatically
+      form.reset()
+    });
+  </script>
 </html>
